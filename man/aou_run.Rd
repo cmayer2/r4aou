@@ -2,10 +2,8 @@
 % Please edit documentation in R/functions.R
 \name{aou_run}
 \alias{aou_run}
-\title{Run query}
+\title{run sql command}
 \usage{
-aou_run(sql)
-
 aou_run(sql)
 }
 \arguments{
@@ -13,11 +11,7 @@ aou_run(sql)
 }
 \value{
 
-
-
 }
 \description{
-Run query
-
 run sql command
 }
