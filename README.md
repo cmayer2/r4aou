@@ -1,4 +1,4 @@
-[r4AOU Full Github page](https://github.com/cmayer2/tree/master/r4aou)
+[r4AOU Full Github page](https://github.com/cmayer2/r4aou)
 
 # r4aou
 R package for tasks inside All of Us Workbench  (AllofUs or AOU)
