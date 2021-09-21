@@ -1,18 +1,19 @@
+[r4AOU Full Github page](https://github.com/cmayer2/tree/master/r4aou)
+
 # r4aou
 R package for tasks inside All of Us Workbench  (AllofUs or AOU)
 
-# OLD README (ARCHIVED)
 
-## Install package
+# Install package
 
     library(devtools)
-    install_github('vojtechhuser/r4aou')
+    install_github('lhncbc/CRI/AoU/r4aou')
     
-## Sample use
+# Sample use
 
     aou_tables()
 
-## Initial code for notebook
+# Initial code for notebook
 
       library(purrr);library(tidyverse);library(magrittr);library(devtools);library(stringr);library(bigrquery);library(glue)
       options(scipen=999) #disable scientific notation
@@ -27,4 +28,5 @@ R package for tasks inside All of Us Workbench  (AllofUs or AOU)
 
     
     
+
 
