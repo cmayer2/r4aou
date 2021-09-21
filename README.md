@@ -1,11 +1,6 @@
 # r4aou
 R package for tasks inside All of Us Workbench  (AllofUs or AOU)
 
-
-# NEW URL FOR THE PACKAGE
-
-The package new home is https://github.com/lhncbc/CRI/tree/master/AoU/r4aou
-
 # OLD README (ARCHIVED)
 
 ## Install package
