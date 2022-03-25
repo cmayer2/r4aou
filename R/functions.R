@@ -39,7 +39,7 @@ aou_run <-function(sql){
   cdmDatabaseSchema=Sys.getenv('WORKSPACE_CDR')
   sql <- SqlRender::render(sql,cdmDatabaseSchema=cdmDatabaseSchema)
   sql <- SqlRender::translate(sql,targetDialect = 'bigquery')
-  sql=stringr::str_replace_all(sql,'r2021q3r2','R2021Q3R2')
+  sql=stringr::str_replace_all(sql,'r2021q3r5','R2021Q3R5')
   q <- bigrquery::bq_project_query(billing, sql)
   out<-bigrquery::bq_table_download(q)
   list(query=sql,result=out)
@@ -220,7 +220,7 @@ sql5= gsub("create table", "CREATE TEMP TABLE", sql4translated)
 sql5= gsub("CREATE TABLE", "CREATE TEMP TABLE", sql5)
 sql5=gsub("and e.end_date >= i.start_date","",sql5)
 
-sql5=stringr::str_replace_all(sql5,'r2021q3r2','R2021Q3R2')
+sql5=stringr::str_replace_all(sql5,'r2021q3r5','R2021Q3R5')
 #run and export results
 q <- bigrquery::bq_project_query(billing, sql5)
 out<-bigrquery::bq_table_download(q)
