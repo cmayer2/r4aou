@@ -98,7 +98,7 @@ aou_write_rds<-function(data,destination_filename){
 
 #' List columns of a table
 #'
-#' @param table name of table (e.g., person)
+#' @param table name of table as string (e.g., 'person')
 #'
 #' @return data frame with fields and type and description
 #' @export
@@ -171,9 +171,9 @@ cdmDatabaseSchemaInternal=Sys.getenv('WORKSPACE_CDR')
 #grabs sql from cohort_id
 
 version <- ROhdsiWebApi:::getWebApiVersion(baseUrl = baseUrl)
-d=getDefinitionsMetadata(baseUrl,category = 'cohort')
-aa=getCohortDefinition(cohortId,baseUrl)
-sql=getCohortSql(aa,baseUrl)
+d=ROhdsiWebApi:::getDefinitionsMetadata(baseUrl,category = 'cohort')
+aa=ROhdsiWebApi:::getCohortDefinition(cohortId,baseUrl)
+sql=ROhdsiWebApi:::getCohortSql(aa,baseUrl)
 
 #prep the temp table (compensate for lack of result schema here    - ^ step
   #cohort sensor table, target_cohort_table (always call 
