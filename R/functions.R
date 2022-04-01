@@ -164,7 +164,7 @@ aou_get_dd<-function(){
 #' @param baseUrl URL of the Atlas server
 #' @return cohort id and data.frame with cohort data (person, start and end date)
 #' @export
-aou_execute_cohort <-function(cohortId,baseUrl='http://atlas-demo.ohdsi.org:80/WebAPI'){
+aou_execute_cohort <-function(cohortId,baseUrl='http://api.ohdsi.org/WebAPI'){
 billing=Sys.getenv('GOOGLE_PROJECT')
 cdmDatabaseSchemaInternal=Sys.getenv('WORKSPACE_CDR')
 
@@ -191,7 +191,6 @@ TargetCohortTable  = cohortId
 sql2= gsub("@vocabulary_database_schema", "@cdm_database_schema", sql2)
 sql2= gsub("@target_database_schema.", "", sql2)
 sql2=gsub("delete from cohort_censor_stats where cohort_definition_id = @target_cohort_id;","",sql2)
-sql2=gsub("cohort_definition_id","@cohort_definition_id",sql2)
 sql2=gsub("@cdm_database_schema.observation_period","#observation_period2",sql2)
   
 # Add parentheses at end of table creation
