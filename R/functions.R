@@ -39,7 +39,7 @@ aou_run <-function(sql){
   cdmDatabaseSchema=Sys.getenv('WORKSPACE_CDR')
   sql <- SqlRender::render(sql,cdmDatabaseSchema=cdmDatabaseSchema)
   sql <- SqlRender::translate(sql,targetDialect = 'bigquery')
-  sql=stringr::str_replace_all(sql,'r2021q3r5','R2021Q3R5')
+  sql=stringr::str_replace_all(sql,tolower(cdmDatabaseSchema),cdmDatabaseSchema)
   q <- bigrquery::bq_project_query(billing, sql)
   out<-bigrquery::bq_table_download(q)
   list(query=sql,result=out)
