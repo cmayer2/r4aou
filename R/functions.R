@@ -219,7 +219,7 @@ sql5= gsub("create table", "CREATE TEMP TABLE", sql4translated)
 sql5= gsub("CREATE TABLE", "CREATE TEMP TABLE", sql5)
 sql5=gsub("and e.end_date >= i.start_date","",sql5)
 
-sql5=stringr::str_replace_all(sql5,'r2021q3r5','R2021Q3R5')
+sql5=stringr::str_replace_all(sql5,,tolower(cdmDatabaseSchema),cdmDatabaseSchema)
 #run and export results
 q <- bigrquery::bq_project_query(billing, sql5)
 out<-bigrquery::bq_table_download(q)
