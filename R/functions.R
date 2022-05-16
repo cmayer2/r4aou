@@ -166,7 +166,7 @@ aou_get_dd<-function(){
 #' @export
 aou_execute_cohort <-function(cohortId,baseUrl='http://api.ohdsi.org/WebAPI'){
 billing=Sys.getenv('GOOGLE_PROJECT')
-cdmDatabaseSchemaInternal=Sys.getenv('WORKSPACE_CDR')
+cdmDatabaseSchema=Sys.getenv('WORKSPACE_CDR')
 
 #grabs sql from cohort_id
 
